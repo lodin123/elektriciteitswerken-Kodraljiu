@@ -210,12 +210,31 @@ nav {
 
 /* ===== HERO ===== */
 .hero {
-  background: var(--navy);
+  position: relative;
   padding: 140px 0 80px;
   overflow: hidden;
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('hero.jpg') center / cover no-repeat;
+  filter: saturate(0.2);
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.78);
+  z-index: 1;
+}
+
 .hero-inner {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
