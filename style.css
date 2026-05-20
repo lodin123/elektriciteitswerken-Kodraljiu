@@ -160,9 +160,11 @@ img {
   flex-shrink: 0;
 }
 
-.logo-bolt {
-  color: var(--yellow);
-  font-size: 1.3rem;
+.logo-img {
+  height: 28px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 nav {
