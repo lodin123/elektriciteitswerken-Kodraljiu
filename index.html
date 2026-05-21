@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
 
@@ -30,17 +32,18 @@
 
   <!-- ===== HERO ===== -->
   <section id="home" class="hero">
+    <div id="particles-js"></div>
     <div class="container hero-inner">
       <div class="hero-text">
-        <p class="hero-eyebrow">Erkend Elektricien — West-Vlaanderen</p>
-        <h1>Elektriciteit voor Uw<br /><span class="highlight">Woning &amp; Bedrijf</span></h1>
-        <p class="hero-sub">
+        <p class="hero-eyebrow" data-aos="fade-down" data-aos-delay="100">Erkend Elektricien — West-Vlaanderen</p>
+        <h1 data-aos="fade-up" data-aos-delay="200">Elektriciteit voor Uw<br /><span class="highlight">Woning &amp; Bedrijf</span></h1>
+        <p class="hero-sub" data-aos="fade-up" data-aos-delay="300">
           Snelle, veilige en betrouwbare elektriciteitswerken — van kleine herstellingen tot volledige installaties.
           Meer dan 10 jaar ervaring in de regio.
         </p>
-        <div class="hero-cta">
+        <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
           <a href="#contact" class="btn btn-lg">Gratis offerte aanvragen</a>
-          <a href="tel:+32470000000" class="btn btn-outline btn-lg">&#128222; Bel nu</a>
+          <a href="tel:+32472522282" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone"></i> Bel nu</a>
         </div>
       </div>
     </div>
@@ -49,44 +52,44 @@
   <!-- ===== SERVICES ===== -->
   <section id="services" class="services">
     <div class="container">
-      <p class="section-tag">Wat wij doen</p>
-      <h2 class="section-title">Onze Diensten</h2>
-      <p class="section-sub">Professionele elektriciteitswerken voor elk project.</p>
+      <p class="section-tag" data-aos="fade-up">Wat wij doen</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Onze Diensten</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="200">Professionele elektriciteitswerken voor elk project.</p>
 
       <div class="services-grid">
 
-        <div class="card">
-          <div class="card-icon">&#127968;</div>
+        <div class="card" data-aos="fade-up" data-aos-delay="0">
+          <div class="card-icon"><i class="fa-solid fa-house"></i></div>
           <h3>Residentieel</h3>
           <p>Bekabeling, groepenkastenvervanging, stopcontacten, schakelaars, verlichtingsinstallaties en veiligheidscontroles voor woningen en appartementen.</p>
         </div>
 
-        <div class="card">
-          <div class="card-icon">&#127970;</div>
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon"><i class="fa-solid fa-building"></i></div>
           <h3>Commercieel</h3>
           <p>Elektriciteitsinstallaties voor kantoren en winkels, energieverdeling, energiezuinige verlichting en periodiek onderhoud.</p>
         </div>
 
-        <div class="card">
-          <div class="card-icon">&#9889;</div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
           <h3>Spoedherstellingen</h3>
           <p>Stroomonderbrekingen, gesprongen zekeringen, elektrische gevaren — wij reageren snel, dag en nacht.</p>
         </div>
 
-        <div class="card">
-          <div class="card-icon">&#9728;</div>
+        <div class="card" data-aos="fade-up" data-aos-delay="0">
+          <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
           <h3>Verlichting &amp; Domotica</h3>
           <p>LED-vervanging, buitenverlichting, slimme schakelaars en bekabeling voor thuisautomatisering.</p>
         </div>
 
-        <div class="card">
-          <div class="card-icon">&#128268;</div>
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon"><i class="fa-solid fa-plug"></i></div>
           <h3>Groepenkast &amp; Bekabeling</h3>
           <p>Vervanging van zekeringkasten, aardlekschakelaars, herbekabeling van oudere woningen conform de huidige veiligheidsnormen.</p>
         </div>
 
-        <div class="card">
-          <div class="card-icon">&#128337;</div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
           <h3>Keuringen</h3>
           <p>Elektrische keuringen voor aan- en verkoop, veiligheidsaudits en conformiteitsattesten voor eigenaars en verhuurders.</p>
         </div>
@@ -99,9 +102,9 @@
   <section id="about" class="about">
     <div class="container about-inner">
       <div class="about-text">
-        <p class="section-tag">Wie zijn wij</p>
-        <h2 class="section-title">Betrouwbare Elektriciens<br />waar u op kunt rekenen</h2>
-        <p>
+        <p class="section-tag" data-aos="fade-right">Wie zijn wij</p>
+        <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">Betrouwbare Elektriciens<br />waar u op kunt rekenen</h2>
+        <p data-aos="fade-right" data-aos-delay="200">
           Kodraljiu Elektriciteit levert al meer dan tien jaar kwaliteitswerk in West-Vlaanderen.
           Elk project — groot of klein — verdient dezelfde zorg, precisie en vakmanschap.
         </p>
@@ -111,24 +114,24 @@
         </p>
         <div class="trust-badges">
           <div class="badge">
-            <span class="badge-icon">&#10003;</span>
+            <span class="badge-icon"><i class="fa-solid fa-check"></i></span>
             <span>Erkend &amp; Gecertificeerd</span>
           </div>
           <div class="badge">
-            <span class="badge-icon">&#10003;</span>
+            <span class="badge-icon"><i class="fa-solid fa-check"></i></span>
             <span>Volledig Verzekerd</span>
           </div>
           <div class="badge">
-            <span class="badge-icon">&#10003;</span>
+            <span class="badge-icon"><i class="fa-solid fa-check"></i></span>
             <span>24/7 Beschikbaar</span>
           </div>
           <div class="badge">
-            <span class="badge-icon">&#10003;</span>
+            <span class="badge-icon"><i class="fa-solid fa-check"></i></span>
             <span>10+ jaar ervaring</span>
           </div>
         </div>
       </div>
-      <div class="about-stats">
+      <div class="about-stats" data-aos="fade-left" data-aos-delay="100">
         <div class="stat">
           <span class="stat-num">500+</span>
           <span class="stat-label">Projecten voltooid</span>
@@ -141,10 +144,6 @@
           <span class="stat-num">100%</span>
           <span class="stat-label">Tevreden klanten</span>
         </div>
-        <div class="stat">
-          <span class="stat-num">24/7</span>
-          <span class="stat-label">Spoedinterventie</span>
-        </div>
       </div>
     </div>
   </section>
@@ -152,17 +151,17 @@
   <!-- ===== TEAM ===== -->
   <section id="team" class="team">
     <div class="container">
-      <p class="section-tag">Ons Team</p>
-      <h2 class="section-title">De Mensen Achter het Werk</h2>
+      <p class="section-tag" data-aos="fade-up">Ons Team</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">De Mensen Achter het Werk</h2>
       <div class="team-grid">
 
-        <div class="team-card">
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="100">
           <img src="team1.jpg" class="team-photo" alt="Liridon Kodralija" />
           <h3>Liridon Kodralija</h3>
           <p class="team-role">5 jaar ervaring</p>
         </div>
 
-        <div class="team-card">
+        <div class="team-card" data-aos="zoom-in" data-aos-delay="250">
           <img src="team2.jpg" class="team-photo" alt="Sabahudin Kodraljiu" />
           <h3>Sabahudin Kodraljiu</h3>
           <p class="team-role">8 jaar ervaring</p>
@@ -177,36 +176,43 @@
     <div class="container contact-inner">
 
       <div class="contact-info">
-        <p class="section-tag">Neem contact op</p>
-        <h2 class="section-title">Vraag een gratis offerte aan</h2>
+        <p class="section-tag" data-aos="fade-right">Neem contact op</p>
+        <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">Vraag een gratis offerte aan</h2>
         <p>Vul het formulier in en wij nemen binnen 24 uur contact met u op. Voor spoedgevallen kunt u ons rechtstreeks bellen.</p>
 
         <ul class="contact-details">
           <li>
-            <span class="detail-icon">&#128222;</span>
+            <span class="detail-icon"><i class="fa-solid fa-phone"></i></span>
             <div>
               <strong>Telefoon</strong>
-              <a href="tel:+32470000000">+32 470 00 00 00</a>
+              <a href="tel:+32472522282">0472 52 22 82</a>
             </div>
           </li>
           <li>
-            <span class="detail-icon">&#128140;</span>
+            <span class="detail-icon"><i class="fa-solid fa-envelope"></i></span>
             <div>
               <strong>E-mail</strong>
-              <a href="mailto:info@kodraljiuelektriciteit.be">info@kodraljiuelektriciteit.be</a>
+              <a href="mailto:Kodraljiu@gmail.com">Kodraljiu@gmail.com</a>
             </div>
           </li>
           <li>
-            <span class="detail-icon">&#128205;</span>
+            <span class="detail-icon"><i class="fa-solid fa-location-dot"></i></span>
             <div>
               <strong>Locatie</strong>
               <span>West-Vlaanderen, België</span>
             </div>
           </li>
+          <li>
+            <span class="detail-icon whatsapp-icon"><i class="fa-brands fa-whatsapp"></i></span>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/32472522282" target="_blank">Stuur een bericht</a>
+            </div>
+          </li>
         </ul>
       </div>
 
-      <div class="contact-form-wrap">
+      <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="150">
         <form id="contact-form" name="contact" method="POST" netlify>
           <input type="hidden" name="form-name" value="contact" />
 
@@ -230,10 +236,10 @@
             <textarea id="message" name="message" rows="4" placeholder="Vertel ons wat u nodig heeft..." required></textarea>
           </div>
 
-          <button type="submit" class="btn btn-lg btn-full">Verstuur bericht &#10148;</button>
+          <button type="submit" class="btn btn-lg btn-full">Verstuur bericht <i class="fa-solid fa-paper-plane"></i></button>
 
           <div id="form-success" class="form-success" hidden>
-            &#10003; Bedankt! Wij nemen binnen 24 uur contact met u op.
+            <i class="fa-solid fa-circle-check"></i> Bedankt! Wij nemen binnen 24 uur contact met u op.
           </div>
         </form>
       </div>
@@ -256,6 +262,8 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
