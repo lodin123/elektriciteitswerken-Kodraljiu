@@ -65,6 +65,79 @@ if (hero && heroText) {
   });
 }
 
+// Reviews slider
+(function () {
+  const track = document.getElementById('reviews-track');
+  const dotsContainer = document.getElementById('reviews-dots');
+  if (!track) return;
+
+  const cards = track.querySelectorAll('.review-card');
+  let current = 0;
+  let perView = window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+  const total = Math.ceil(cards.length / perView);
+
+  // Maak dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function goTo(index) {
+    current = (index + total) % total;
+    const cardWidth = cards[0].offsetWidth + 24;
+    track.style.transform = `translateX(-${current * perView * cardWidth}px)`;
+    dotsContainer.querySelectorAll('.dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  document.getElementById('reviews-prev').addEventListener('click', () => goTo(current - 1));
+  document.getElementById('reviews-next').addEventListener('click', () => goTo(current + 1));
+
+  // Auto-slide elke 4 seconden
+  setInterval(() => goTo(current + 1), 4000);
+
+  window.addEventListener('resize', () => {
+    perView = window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+    goTo(0);
+  });
+})();
+
+// Realisaties filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.masonry-item').forEach(item => {
+      const match = filter === 'all' || item.dataset.category === filter;
+      item.style.opacity = match ? '1' : '0.2';
+      item.style.transform = match ? 'scale(1)' : 'scale(0.95)';
+      item.style.pointerEvents = match ? 'auto' : 'none';
+    });
+  });
+});
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+
+// Sluit menu bij klik op link
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
 // Sticky header shadow on scroll
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
@@ -73,13 +146,13 @@ window.addEventListener('scroll', () => {
 
 // Highlight active nav link based on visible section
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
+const navLinkItems = document.querySelectorAll('.nav-links a');
 
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        navLinks.forEach((link) => {
+        navLinkItems.forEach((link) => {
           link.classList.toggle(
             'active',
             link.getAttribute('href') === '#' + entry.target.id

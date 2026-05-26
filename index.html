@@ -20,12 +20,17 @@
         <img src="logo.png" class="logo-img" alt="Kodraljiu Elektriciteit" /> Kodraljiu Elektriciteit
       </a>
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
           <li><a href="#services">Diensten</a></li>
           <li><a href="#about">Over ons</a></li>
+          <li><a href="#realisaties">Realisaties</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li class="nav-cta-mobile"><a href="#contact" class="btn btn-sm">Offerte aanvragen</a></li>
         </ul>
-        <a href="#contact" class="btn btn-sm">Offerte aanvragen</a>
+        <a href="#contact" class="btn btn-sm nav-cta-desktop">Offerte aanvragen</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
     </div>
   </header>
@@ -35,7 +40,7 @@
     <div id="particles-js"></div>
     <div class="container hero-inner">
       <div class="hero-text">
-        <p class="hero-eyebrow" data-aos="fade-down" data-aos-delay="100">Erkend Elektricien — West-Vlaanderen</p>
+        <p class="hero-eyebrow" data-aos="fade-down" data-aos-delay="100">Erkende Elektriciens — West-Vlaanderen</p>
         <h1 data-aos="fade-up" data-aos-delay="200">Elektriciteit voor Uw<br /><span class="highlight">Woning &amp; Bedrijf</span></h1>
         <p class="hero-sub" data-aos="fade-up" data-aos-delay="300">
           Snelle, veilige en betrouwbare elektriciteitswerken — van kleine herstellingen tot volledige installaties.
@@ -62,18 +67,6 @@
           <div class="card-icon"><i class="fa-solid fa-house"></i></div>
           <h3>Residentieel</h3>
           <p>Bekabeling, groepenkastenvervanging, stopcontacten, schakelaars, verlichtingsinstallaties en veiligheidscontroles voor woningen en appartementen.</p>
-        </div>
-
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-icon"><i class="fa-solid fa-building"></i></div>
-          <h3>Commercieel</h3>
-          <p>Elektriciteitsinstallaties voor kantoren en winkels, energieverdeling, energiezuinige verlichting en periodiek onderhoud.</p>
-        </div>
-
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h3>Spoedherstellingen</h3>
-          <p>Stroomonderbrekingen, gesprongen zekeringen, elektrische gevaren — wij reageren snel, dag en nacht.</p>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="0">
@@ -148,6 +141,87 @@
     </div>
   </section>
 
+  <!-- ===== REALISATIES ===== -->
+  <section id="realisaties" class="realisaties-preview">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">Ons werk</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Onze Realisaties</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="200">Een greep uit onze uitgevoerde elektriciteitswerken in West-Vlaanderen.</p>
+
+      <div class="filter-bar" data-aos="fade-up" data-aos-delay="250">
+        <button class="filter-btn active" data-filter="all">Alles</button>
+        <button class="filter-btn" data-filter="residentieel">Residentieel</button>
+        <button class="filter-btn" data-filter="verlichting">Verlichting</button>
+        <button class="filter-btn" data-filter="groepenkast">Groepenkast</button>
+      </div>
+
+      <div class="masonry-grid" id="masonry-grid" data-aos="fade-up" data-aos-delay="300">
+
+        <div class="masonry-item" data-category="groepenkast">
+          <div class="masonry-img placeholder"><i class="fa-solid fa-plug"></i></div>
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Groepenkast</span>
+            <p class="masonry-title">Nieuwe groepenkast — Brugge</p>
+          </div>
+        </div>
+
+        <div class="masonry-item tall" data-category="residentieel">
+          <div class="masonry-img placeholder"><i class="fa-solid fa-house"></i></div>
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Residentieel</span>
+            <p class="masonry-title">Volledige herbekabeling woning — Kortrijk</p>
+          </div>
+        </div>
+
+        <div class="masonry-item" data-category="verlichting">
+          <div class="masonry-img placeholder"><i class="fa-solid fa-lightbulb"></i></div>
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Verlichting</span>
+            <p class="masonry-title">LED-installatie — Roeselare</p>
+          </div>
+        </div>
+
+        <div class="masonry-item tall" data-category="verlichting">
+          <div class="masonry-img placeholder"><i class="fa-solid fa-sun"></i></div>
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Verlichting</span>
+            <p class="masonry-title">Buitenverlichting tuin — Oostende</p>
+          </div>
+        </div>
+
+        <div class="masonry-item" data-category="groepenkast">
+          <div class="masonry-img placeholder"><i class="fa-solid fa-bolt"></i></div>
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Groepenkast</span>
+            <p class="masonry-title">Zekeringkast upgrade — Brugge</p>
+          </div>
+        </div>
+
+        <div class="masonry-item" data-category="residentieel">
+          <div class="masonry-img placeholder"><i class="fa-solid fa-plug-circle-check"></i></div>
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Residentieel</span>
+            <p class="masonry-title">Stopcontacten & schakelaars — Veurne</p>
+          </div>
+        </div>
+
+        <div class="masonry-item tall" data-category="residentieel">
+          <div class="masonry-img placeholder"><i class="fa-solid fa-clipboard-check"></i></div>
+          <div class="masonry-overlay">
+            <span class="masonry-tag">Residentieel</span>
+            <p class="masonry-title">Elektrische keuring — Roeselare</p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="gallery-note" data-aos="fade-up">
+        <i class="fa-solid fa-circle-info"></i>
+        Eigen foto's toevoegen? Vervang de placeholders door echte foto's van uw werk.
+      </p>
+    </div>
+  </section>
+
   <!-- ===== TEAM ===== -->
   <section id="team" class="team">
     <div class="container">
@@ -158,15 +232,110 @@
         <div class="team-card" data-aos="zoom-in" data-aos-delay="100">
           <img src="team1.jpg" class="team-photo" alt="Liridon Kodralija" />
           <h3>Liridon Kodralija</h3>
-          <p class="team-role">5 jaar ervaring</p>
+          <p class="team-role">10 jaar ervaring</p>
         </div>
 
         <div class="team-card" data-aos="zoom-in" data-aos-delay="250">
           <img src="team2.jpg" class="team-photo" alt="Sabahudin Kodraljiu" />
           <h3>Sabahudin Kodraljiu</h3>
-          <p class="team-role">8 jaar ervaring</p>
+          <p class="team-role">10 jaar ervaring</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">Wat klanten zeggen</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Google Reviews</h2>
+
+      <div class="reviews-slider" data-aos="fade-up" data-aos-delay="200">
+        <div class="reviews-track" id="reviews-track">
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">JV</div>
+              <div>
+                <p class="review-name">Jan Vermeersch</p>
+                <p class="review-location">Brugge</p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="google-logo" alt="Google" />
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Zeer professioneel team. Onze groepenkast werd vervangen op één dag, netjes en zonder rommel. Zeker aan te bevelen!"</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">SD</div>
+              <div>
+                <p class="review-name">Sophie Declercq</p>
+                <p class="review-location">Kortrijk</p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="google-logo" alt="Google" />
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Snel ter plaatse bij een stroompanne 's avonds. Vriendelijk en eerlijk geprijsd. Echt een aanrader voor spoedgevallen."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">MV</div>
+              <div>
+                <p class="review-name">Marc Vandenbroecke</p>
+                <p class="review-location">Roeselare</p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="google-logo" alt="Google" />
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Volledige herbekabeling van onze woning — perfect uitgevoerd. Kwamen op tijd, werkten efficiënt en de prijs was correct."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">LM</div>
+              <div>
+                <p class="review-name">Lies Maes</p>
+                <p class="review-location">Ieper</p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="google-logo" alt="Google" />
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Ledverlichting geïnstalleerd in heel de woning. Geweldig resultaat en al het oude materiaal werd netjes afgevoerd. Top service!"</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">PD</div>
+              <div>
+                <p class="review-name">Peter Desmet</p>
+                <p class="review-location">Oostende</p>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="google-logo" alt="Google" />
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Elektrische keuring voor aankoop van ons huis. Duidelijk rapport, snel geleverd. Zeer betrouwbaar en deskundig bedrijf."</p>
+          </div>
+
+        </div>
+
+        <div class="reviews-nav">
+          <button class="reviews-prev" id="reviews-prev" aria-label="Vorige"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="reviews-dots" id="reviews-dots"></div>
+          <button class="reviews-next" id="reviews-next" aria-label="Volgende"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
       </div>
     </div>
   </section>
@@ -261,6 +430,11 @@
       </nav>
     </div>
   </footer>
+
+  <!-- Vaste WhatsApp knop -->
+  <a href="https://wa.me/32472522282?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
